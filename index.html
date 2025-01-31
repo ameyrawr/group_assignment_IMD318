@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEMAQ BARBERSHOP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f8c12c;
+        }
+
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #home {
+            background-image: url('image/tool9.jpg'); /* Replace with the path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        h1
+        {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #f8c12c;
+            border-radius: 5px;
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f8c12c;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .cta-button {
+            background-color: #f8c12c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        #about {
+            background-color: #fff;
+            padding: 60px 20px;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-logo img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content {
+            text-align: left;
+            max-width: 800px;
+        }
+
+        .about-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .about-logo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 4px solid #f8c12c;
+        }
+
+        #contact {
+            background-color: #fff;
+            padding: 60px 20px;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h3 {
+            color: #f8c12c;
+            margin-bottom: 15px;
+        }
+        .service-card ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-card ul li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .service-card ul li strong {
+            color: #333;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .contact-info a {
+            color: #f8c12c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background: #222;
+            padding: 40px 0;
+            text-align: center;
+            color: #ccc;
+            border-top: 3px solid #f39c12;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .footer p strong {
+            font-weight: 700;
+            color: #f39c12;
+        }
+        .footer a {
+          color: #f39c12;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SEMAQ BARBERSHOP</h1>
+        <nav>
+            <a href="#about">ABOUT US</a>
+            <a href="service.html">SERVICES</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="location.html">LOCATION</a>
+            <a href="haircut.html">HAIRCUTS</a>
+            <a href="tools.html">TOOLS</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>YOU WON'T KNOW UNLESS YOU TRY</h2>
+        <a href="#contact" class="cta-button">BOOK NOW</a>
+    </section>
+
+    <section id="about">
+        <h2>ABOUT US</h2>
+        <div class="about-container">
+            <!-- Logo -->
+            <div class="about-logo">
+                <img src="image/logoabout1.png" alt="SemaQ Barber Logo">
+            </div>
+
+            <div class="about-content">
+                <p>
+                    SemaQ Barber is located near Universiti Teknologi Mara (UiTM) Cawangan Kelantan in Machang. Officially opened on October 29, 2023, by Professor Ts. Dr. Salmiah Kasolang, Assistant Vice-Chancellor of the Malaysian Academy of SME & Entrepreneurship Development (MASMED), SemaQ Barber is a collaborative initiative between MASMED UiTM Kelantan and the College and Non-Resident Management Unit.
+                </p>
+                <p>
+                    Our mission is to provide convenient grooming services for both male and female students on campus while offering entrepreneurial opportunities for those interested in the barbering trade. By utilizing university facilities, we aim to motivate students to engage in healthful activities and foster a spirit of entrepreneurship.
+                </p>
+                <p>
+                    SemaQ Barber currently employs 10 registered workers, including 6 male and 4 female students. We source all our supplies from Kota Bharu through a partnership with Firdaus Barber, an UiTM alumni in Machang. Despite our strategic goals, we face challenges such as co-worker availability and skill gaps, particularly during peak hours, which can lead to longer wait times for customers.
+                </p>
+                <p>
+                    At SemaQ Barber, we are committed to enhancing campus life and supporting student entrepreneurship by providing essential services in a university environment. Join us in our journey to create a vibrant and supportive community at UiTM Kelantan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>CONTACT & PRICING</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <h3>Services for women</h3>
+                <ul>
+                    <li><strong>Dry Haircut</strong>: RM13 - RM15 (depends on styles)</li>
+                    <li><strong>Hairwash</strong>: RM15 - RM18</li>
+                    <li><strong>Haircut + Hairwash</strong>: RM20 - RM25</li>
+                    <li><strong>Blow/Iron</strong>: +RM7</li>
+                    <li><strong>Rebonding</strong>: RM75 and above</li>
+                </ul>
+                <div class="contact-info">
+                    <p><strong>Operating Hours</strong>: 8:00 PM - 11:30 PM</p>
+                    <p><strong>Walk-in Available</strong>: Yes</p>
+                    <p><strong>For Booking</strong>: Contact <a href="https://wa.me/+601121987710" target="_blank">011-2198 7710 (Wawaa)</a></p>
+                </div>
+            </div>
+            <div class="service-card">
+                <h3>Services for men</h3>
+                <ul>
+                    <li><strong>Dry Haircut</strong>: RM8 (depends on styles)</li>
+                    <li><strong>Basic Haircut</strong>: RM8</li>
+                    <li><strong>Hairwash</strong>: RM8</li>
+                    <li><strong>Blow/Iron</strong>: RM8</li>
+                    <li><strong>Rebonding</strong>: RM80</li>
+                    <li><strong>Keratin Treatment</strong>: RM80</li>
+                    <li><strong>Holiday Keratin Treatment</strong>: RM80</li>
+                </ul>
+                <div class="contact-info">
+                    <p><strong>Operating Hours</strong>: 8:00 PM - 11:00 PM</p>
+                    <p><strong>Walk-in Available</strong>: Yes</p>
+                    <p><strong>For Booking</strong>: Contact <a href="https://wa.me/+601115172305" target="_blank">011-1517 2305</a></p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://wa.me/+601115172305" class="cta-button" target="_blank">Chat on WhatsApp</a>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 <strong>SemaQ Barber Shop</strong>. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

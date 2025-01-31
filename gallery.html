@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery</title>
+
+  <style>
+    body
+    {
+      background-image: url('image/tool9.jpg');
+      background-color: black;
+      align-items: center;
+            margin: 20px;
+    }
+    header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f8c12c;
+        }
+
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    .gallery-container
+    {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery-item img
+    {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery-item img:hover
+    {
+      transform: scale(1.2);
+    }
+        .gallery-item video 
+        {
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    .description-box
+    {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: orange;
+      border: 2px dotted orangered;
+      border-radius: 3px;
+      font-size: 40px;
+      font-weight: bold;
+      color: black;
+      text-align: center;
+    }
+    h1
+    {
+      font-family: 'Georgia', serif;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #f8c12c;
+            border-radius: 5px;
+    }
+    h2
+    {
+      font-family: georgia;
+      font-size: 40px;
+      color: #f8c12c;
+    
+    }
+    p
+    {
+      color: white;
+    }
+    .footer {
+            background: #222;
+            padding: 40px 0;
+            text-align: center;
+            color: #ccc;
+            border-top: 3px solid #f39c12;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .footer p strong {
+            font-weight: 700;
+            color: #f39c12;
+        }
+        .footer a {
+          color: #f39c12;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+  </style>
+
+</head>
+<body>
+      <header>
+        <h1>SEMAQ BARBERSHOP</h1>
+        <nav>
+            <a href="index.html">ABOUT US</a>
+            <a href="service.html">SERVICES</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="location.html">LOCATION</a>
+            <a href="haircut.html">HAIRCUTS</a>
+            <a href="tools.html">TOOLS</a>
+        </nav>
+    </header>
+
+  <section id="gallery-container">
+
+    <section>
+    <h2>Pictures</h2>
+    <p><b>Click on the images below for the caption (Need to scroll down)</b></p>
+    <div class="gallery-container">
+      <div class="gallery-item" onclick="showDescription('Tools')">
+        <img src="image/gallery1.jpg" alt="Gallery 1">
+      </div>
+      <div class="gallery-item" onclick="showDescription('Price list')">
+        <img src="image/gallery2.jpg" alt="Gallery 2">
+      </div>  
+      <div class="gallery-item" onclick="showDescription('Service and Price')">
+        <img src="image/gallery3.jpg" alt="Gallery 3">
+      </div>
+      <div class="gallery-item" onclick="showDescription('Logo of SemaQ Barber')">
+        <img src="image/gallery4.jpg" alt="Gallery 4">
+      </div>
+      <div class="gallery-item" onclick="showDescription('The place where the customer will sit')">
+        <img src="image/gallery5.jpg" alt="Gallery 5">
+      </div>
+      <div class="gallery-item" onclick="showDescription('Team members with the barber')">
+        <img src="image/gallery6.jpg" alt="Gallery 6">
+      </div>
+      <div class="gallery-item" onclick="showDescription('Interview session with Encik Azrul (owner of the barbershop)')">
+        <img src="image/gallery7.jpg" alt="Gallery 7">
+      </div>
+      <div class="gallery-item" onclick="showDescription('The barber with customer')">
+        <img src="image/gallery8.jpg" alt="Gallery 8">
+      </div>
+      <div class="gallery-item" onclick="showDescription('The entrance of barbershop')">
+        <img src="image/gallery9.jpg" alt="Gallery 9">
+      </div>
+      <div class="gallery-item" onclick="showDescription('This is blow service')">
+        <img src="image/gallery10.jpg" alt="Gallery 10">
+      </div>
+      <div class="gallery-item" onclick="showDescription('The entrance of barbershop')">
+        </section>
+<br><br>
+        <h2>Videos</h2>
+        <video width="250" controls>
+          <source src="image/gallery11.mp4" type="video/MP4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="gallery-item" onclick="showDescription('The barber with customer')">
+        <video width="250" controls>
+          <source src="image/gallery14.mp4" type="video/MP4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="gallery-item" onclick="showDescription('The barber is cutting customer hair')">
+        <video width="250" controls>
+          <source src="image/gallery13.mp4" type="video/MP4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="gallery-item" onclick="showDescription('Main Entrance')">
+        <video width="250" controls>
+          <source src="image/gallery12.mp4" type="video/MP4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="gallery-item" onclick="showDescription('Signboard of Opening Ceremony')">
+        <video width="250" controls>
+          <source src="image/gallery15.mp4" type="video/MP4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="gallery-item" onclick="showDescription('An example of the haircuts')">
+        <video width="250" controls>
+          <source src="image/gallery17.mp4" type="video/MP4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="gallery-item" onclick="showDescription('The chairs the barbershop used')">
+        <video width="250" controls>
+          <source src="image/gallery18.mp4" type="video/MP4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="description-box" id="descriptionBox">
+      <p>Click on the images to see the caption here!</p>
+    </div>
+  </section>
+  
+    <script>
+        function showDescription(text) {
+            var box = document.getElementById('descriptionBox');
+            box.innerText = text;
+            box.style.display = 'block';
+        }
+    </script>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 <strong>SemaQ Barber Shop</strong>. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
